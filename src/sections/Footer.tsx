@@ -51,7 +51,7 @@ const Footer = () => {
             <a href="#">Contact</a>
           </nav>
         </div>
-        <div className="md:48 mt-12 md:flex md:items-center md:justify-between">
+        <div className="mt-12 md:mt-48 md:flex md:items-center md:justify-between">
           <p className="text-zinc-400">
             &copy; 2024 Blockforge. All rights reserved.
           </p>
