@@ -9,10 +9,10 @@ const CallToAction = () => {
       <div className="container">
         <div className="relative">
           <div className="custom-center absolute">
-            <Hexagon className="size-[700px]" />
+            <Hexagon className="size-[700px]" size={700} />
           </div>
           <div className="custom-center absolute">
-            <Hexagon className="size-[1100px]" />
+            <Hexagon className="size-[1100px]" size={1100} reverse />
           </div>
           <div className="custom-center absolute">
             <Circle className="absolute -top-[400px] left-0">
