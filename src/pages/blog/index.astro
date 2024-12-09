@@ -1,7 +1,36 @@
 ---
+import CutCornerButton from "../../components/CutCornerButton";
+import Hexagon from "../../components/Hexagon";
+import DefaultLayout from "../../layouts/Default.astro";
+import Header from "../../sections/Header";
+
 // import { getCollection } from 'astro:content';
 
 // const posts = (await getCollection('blog')).sort(
 // 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 // );
+
 ---
+
+<DefaultLayout>
+    <Header client:load/>
+    <section class="py-60 relative overflow-x-clip">
+        <div class="absolute custom-center">
+            <Hexagon size={800} duration={30} client:load/>
+        </div>
+        <div class="absolute custom-center">
+            <Hexagon size={1200} duration={50} reverse  client:load/>
+        </div>
+        <div class="container">
+            <div class="max-w-3xl mx-auto">
+                <p class="uppercase font-extrabold text-center text-zinc-500 tracking-wider">Latest Post</p>
+                <h1 class="font-heading font-black text-7xl text-center mt-4">Regulatory Challenges Facing Blockchain</h1>
+                <p class="text-center text-2xl mt-6 text-zinc-400 max-w-xl mx-auto">Understanding the regulatory landscape surrounding blockchain and what it means for the future of this technology.</p>
+                <div class="flex justify-center mt-10">
+                    <CutCornerButton>Read More</CutCornerButton>
+                </div>
+            </div>
+        </div>
+    </section>
+<div>Blog</div>
+</DefaultLayout>
