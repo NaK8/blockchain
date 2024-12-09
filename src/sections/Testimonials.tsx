@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -28,8 +29,24 @@ const Testimonials = () => {
       <div className="container">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-12">
           {testimonials.map((testimonial, index) => (
-            <blockquote
-              key={index}
+            <motion.blockquote
+              initial={{
+                opacity: 0,
+                y: 24,
+              }}
+              viewport={{
+                once: true,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                delay: index * 0.5,
+                ease: "easeInOut",
+                duration: 1,
+              }}
+              key={crypto.randomUUID()}
               className={twMerge(index === 2 && "md:hidden lg:block")}
             >
               <p className="font-heading text-3xl font-black lg:text-4xl">
@@ -53,7 +70,7 @@ const Testimonials = () => {
                   </div>
                 </div>
               </cite>
-            </blockquote>
+            </motion.blockquote>
           ))}
         </div>
       </div>
