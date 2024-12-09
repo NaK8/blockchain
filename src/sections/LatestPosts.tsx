@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useRef, type ComponentRef } from "react";
 import Card from "../components/Card";
 import type { CollectionEntry } from "astro:content";
 import { getPostColorFromCategory } from "../utils/postUtils";
 import Tag from "../components/Tag";
 import CutCornerButton from "../components/CutCornerButton";
 import { twMerge } from "tailwind-merge";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const LatestPosts = ({
   latestPosts,
 }: {
   latestPosts: CollectionEntry<"blog">[];
 }) => {
+  const targetRef = useRef<ComponentRef<"div">>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "start center"],
+  });
+
+  const marginTop = useTransform(scrollYProgress, [0, 1], [0, 64]);
   return (
     <section className="py-60">
       <div className="container">
@@ -46,7 +55,13 @@ const LatestPosts = ({
               ),
             )}
           </div>
-          <div className="hidden md:mt-16 md:flex md:flex-col md:gap-8">
+          <motion.div
+            ref={targetRef}
+            className="hidden md:mt-16 md:flex md:flex-col md:gap-8"
+            style={{
+              marginTop,
+            }}
+          >
             {latestPosts.map(
               ({ data: { title, description, category } }, itemIndex) => (
                 <Card
@@ -67,7 +82,7 @@ const LatestPosts = ({
                 </Card>
               ),
             )}
-          </div>
+          </motion.div>
         </div>
         <div className="mt-48 flex justify-center md:mt-32">
           <CutCornerButton>Read The Blogs</CutCornerButton>
