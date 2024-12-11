@@ -38,17 +38,17 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-950 py-24">
+    <footer className="bg-zinc-950 pb-4 pt-24">
       <div className="container">
         <div className="flex items-center justify-between">
           <div>
             <img src="/assets/images/logo.svg" alt="logo" />
           </div>
           <nav className="hidden gap-12 font-heading font-black text-zinc-500 md:flex">
-            <a href="#">Home</a>
-            <a href="#">Blog</a>
-            <a href="#">Career</a>
-            <a href="#">Contact</a>
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/careers">Career</a>
+            <a href="/contact">Contact</a>
           </nav>
         </div>
         <div className="mt-12 md:mt-48 md:flex md:items-center md:justify-between">
@@ -59,12 +59,21 @@ const Footer = () => {
             {socialIcons.map((icon) => (
               <div
                 key={crypto.randomUUID()}
-                className="inline-flex size-10 items-center justify-center rounded-full bg-zinc-800"
+                className="inline-flex size-10 cursor-pointer items-center justify-center rounded-full bg-zinc-800"
               >
                 {icon.icon}
               </div>
             ))}
           </div>
+        </div>
+        <div className="py-4 text-center">
+          Made By{" "}
+          <a
+            className="underline"
+            href="https://www.linkedin.com/in/nabeelk100/"
+          >
+            NAK
+          </a>
         </div>
       </div>
     </footer>

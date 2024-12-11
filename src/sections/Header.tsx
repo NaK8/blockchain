@@ -39,7 +39,9 @@ const Header = () => {
         <div className="container">
           <div className="flex h-24 items-center justify-between md:h-28">
             <div>
-              <img src="/assets/images/logo.svg" alt="logo image" />
+              <a href="/">
+                <img src="/assets/images/logo.svg" alt="logo image" />
+              </a>
             </div>
             <div className="flex items-center gap-4">
               <CutCornerButton className="hidden md:inline-flex">
