@@ -3,6 +3,8 @@ import CutCornerButton from "../components/CutCornerButton";
 import InteriorContent from "../components/InteriorContent.astro";
 import InteriorHero from "../components/InteriorHero.astro";
 import DefaultLayout from "../layouts/Default.astro";
+import Input from "../components/input.astro";
+import Textarea from "../components/Textarea.astro";
 ---
 
 <DefaultLayout>
@@ -34,35 +36,11 @@ import DefaultLayout from "../layouts/Default.astro";
       </h2>
       <form action="" class="flex flex-col mt-8">
         <label for="name">Name</label>
-        <div class="relative z-0">
-          <div
-            class="absolute inset-0 outline outline-2 -outline-offset-2 outline-zinc-700 [mask-image:linear-gradient(225deg,transparent,transparent_10px,black_10px)] group-focus-within:outline-fuchsia-500 -z-10"
-          >
-          </div>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="absolute right-0 top-0 text-zinc-700 -z-10 group-focus-within:text-fuchsia-500"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 1H12.2667L23 11.7333V24"
-              stroke="currentColor"
-              stroke-width="2"></path>
-          </svg>
-          <input
-            type="text"
-            class="bg-transparent h-12 w-full"
-            name="name"
-            id="name"
-          />
-        </div>
+        <Input name="name" id="name" type="text" class="mt-1" />
         <label for="email" class="mt-4">Email</label>
-        <input class="h-12" type="text" name="email" id="email" />
+        <Input name="email" id="email" type="email" class="mt-1" />
         <label for="message" class="mt-4">Message</label>
-        <textarea name="message" id="message"></textarea>
+        <Textarea name="message" id="message" class="mt-1" />
         <CutCornerButton className="mt-4">Send Message</CutCornerButton>
       </form>
     </div>
