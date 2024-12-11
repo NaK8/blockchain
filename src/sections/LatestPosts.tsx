@@ -35,23 +35,25 @@ const LatestPosts = ({
         <div className="mt-16 grid grid-cols-1 gap-8 md:mt-28 md:grid-cols-2">
           <div className="flex flex-col gap-8">
             {latestPosts.map(
-              ({ data: { title, description, category } }, itemIndex) => (
-                <Card
-                  buttonText="Read More"
-                  key={itemIndex}
-                  className={twMerge(
-                    (itemIndex === 1 || itemIndex === 3) && "md:hidden",
-                  )}
-                  color={getPostColorFromCategory(category)}
-                >
-                  <Tag color={getPostColorFromCategory(category)}>
-                    {category}
-                  </Tag>
-                  <h3 className="mt-3 font-heading text-3xl font-black">
-                    {title}
-                  </h3>
-                  <p className="mt-6 text-lg text-zinc-400">{description}</p>
-                </Card>
+              ({ data: { title, description, category }, slug }, itemIndex) => (
+                <a href={`/blog/${slug}`}>
+                  <Card
+                    buttonText="Read More"
+                    key={itemIndex}
+                    className={twMerge(
+                      (itemIndex === 1 || itemIndex === 3) && "md:hidden",
+                    )}
+                    color={getPostColorFromCategory(category)}
+                  >
+                    <Tag color={getPostColorFromCategory(category)}>
+                      {category}
+                    </Tag>
+                    <h3 className="mt-3 font-heading text-3xl font-black">
+                      {title}
+                    </h3>
+                    <p className="mt-6 text-lg text-zinc-400">{description}</p>
+                  </Card>
+                </a>
               ),
             )}
           </div>
@@ -63,29 +65,33 @@ const LatestPosts = ({
             }}
           >
             {latestPosts.map(
-              ({ data: { title, description, category } }, itemIndex) => (
-                <Card
-                  buttonText="Read More"
-                  key={itemIndex}
-                  className={twMerge(
-                    (itemIndex === 0 || itemIndex === 2) && "md:hidden",
-                  )}
-                  color={getPostColorFromCategory(category)}
-                >
-                  <Tag color={getPostColorFromCategory(category)}>
-                    {category}
-                  </Tag>
-                  <h3 className="mt-3 font-heading text-3xl font-black">
-                    {title}
-                  </h3>
-                  <p className="mt-6 text-lg text-zinc-400">{description}</p>
-                </Card>
+              ({ data: { title, description, category }, slug }, itemIndex) => (
+                <a href={`/blog/${slug}`}>
+                  <Card
+                    buttonText="Read More"
+                    key={itemIndex}
+                    className={twMerge(
+                      (itemIndex === 0 || itemIndex === 2) && "md:hidden",
+                    )}
+                    color={getPostColorFromCategory(category)}
+                  >
+                    <Tag color={getPostColorFromCategory(category)}>
+                      {category}
+                    </Tag>
+                    <h3 className="mt-3 font-heading text-3xl font-black">
+                      {title}
+                    </h3>
+                    <p className="mt-6 text-lg text-zinc-400">{description}</p>
+                  </Card>
+                </a>
               ),
             )}
           </motion.div>
         </div>
         <div className="mt-48 flex justify-center md:mt-32">
-          <CutCornerButton>Read The Blogs</CutCornerButton>
+          <a href="/blog">
+            <CutCornerButton>Read The Blogs</CutCornerButton>
+          </a>
         </div>
       </div>
     </section>

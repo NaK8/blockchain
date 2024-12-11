@@ -66,7 +66,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="py-4 text-center">
+        <div className="pb-4 pt-8 md:text-center">
           Made By{" "}
           <a
             className="underline"
