@@ -44,6 +44,8 @@ const Header = () => {
                   src="/assets/images/logo.svg"
                   fetchPriority="high"
                   alt="logo image"
+                  height={23}
+                  width={206}
                 />
               </a>
             </div>

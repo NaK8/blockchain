@@ -84,6 +84,8 @@ const Hero = () => {
                   className="size-[140px]"
                   loading="lazy"
                   decoding="async"
+                  height={50}
+                  width={50}
                 />
               </Circle>
             </div>
@@ -122,13 +124,17 @@ const Hero = () => {
                 className="custom-center absolute -z-10 w-[calc(100%_+_100px)] max-w-none brightness-[4%] hue-rotate-[240deg] saturate-[10%]"
                 src="/assets/images/icosahedron.webp"
                 alt="icosahedron"
+                height={100}
+                width={100}
                 fetchPriority="high"
               />
               <img
                 src="/assets/images/icosahedron.webp"
                 alt="Icosahedron 3d Image"
                 className="w-[500px]"
-                fetchPriority="low"
+                fetchPriority="high"
+                height={100}
+                width={100}
               />
             </motion.div>
           </div>

@@ -113,6 +113,10 @@ const FeaturesGrid = () => {
                   alt="torus knot 3d image"
                   className="size-96 max-w-none"
                   ref={torusKnotRef}
+                  loading="lazy"
+                  decoding="async"
+                  height={50}
+                  width={50}
                   style={{
                     translateY: torusKnotTranslateY,
                     rotate: torusKnotRotate,
@@ -123,6 +127,10 @@ const FeaturesGrid = () => {
                   alt="hemisphere 3d image"
                   className="absolute top-3/4 -z-10 size-96 scale-x-[-1]"
                   ref={firstHemisphereRef}
+                  loading="lazy"
+                  decoding="async"
+                  height={50}
+                  width={50}
                   style={{
                     translateY: firstHemisphereTranslateY,
                     rotate: firstHemispheretRotate,
@@ -139,6 +147,10 @@ const FeaturesGrid = () => {
                   alt="cone 3d image"
                   className="size-96 max-w-none rotate-12"
                   ref={coneRef}
+                  height={50}
+                  width={50}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     translateY: coneTranslateY,
                     rotate: coneRotate,
@@ -148,6 +160,10 @@ const FeaturesGrid = () => {
                   src="/assets/images/hemisphere.webp"
                   alt="hemisphere 3d image"
                   className="absolute top-3/4 -z-10"
+                  loading="lazy"
+                  decoding="async"
+                  height={50}
+                  width={50}
                   ref={secondHemisphereRef}
                   style={{
                     translateY: secondHemisphereTranslateY,

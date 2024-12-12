@@ -42,7 +42,14 @@ const Footer = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <div>
-            <img src="/assets/images/logo.svg" alt="logo" />
+            <img
+              src="/assets/images/logo.svg"
+              decoding="async"
+              height={23}
+              width={206}
+              loading="lazy"
+              alt="logo"
+            />
           </div>
           <nav className="hidden gap-12 font-heading font-black text-zinc-500 md:flex">
             <a href="/">Home</a>

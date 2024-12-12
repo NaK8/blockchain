@@ -36,10 +36,9 @@ const LatestPosts = ({
           <div className="flex flex-col gap-8">
             {latestPosts.map(
               ({ data: { title, description, category }, slug }, itemIndex) => (
-                <a href={`/blog/${slug}`}>
+                <a href={`/blog/${slug}`} key={itemIndex}>
                   <Card
                     buttonText="Read More"
-                    key={itemIndex}
                     className={twMerge(
                       (itemIndex === 1 || itemIndex === 3) && "md:hidden",
                     )}

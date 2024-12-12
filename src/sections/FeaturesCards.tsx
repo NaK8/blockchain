@@ -60,6 +60,7 @@ const FeaturesCards = () => {
             {cardData.map((card, cardIndex) => (
               <div
                 className="inline-flex transition-all duration-500"
+                key={crypto.randomUUID()}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 style={{
@@ -79,6 +80,8 @@ const FeaturesCards = () => {
                         loading="lazy"
                         decoding="async"
                         alt="pill image"
+                        height={50}
+                        width={50}
                         className="size-40 transition duration-300 group-hover:-translate-y-6"
                       />
                     </div>
