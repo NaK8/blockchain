@@ -31,7 +31,7 @@ const CallToAction = () => {
           <div className="custom-center absolute">
             <Circle className="absolute -top-[400px] left-0" animate>
               <motion.img
-                src="/assets/images/cuboid.png"
+                src="/assets/images/cuboid.webp"
                 alt="cuboid object"
                 className="size-[140px]"
                 style={{
@@ -43,7 +43,7 @@ const CallToAction = () => {
           <div className="custom-center absolute">
             <Circle className="absolute -left-[600px] -top-[70px]" animate>
               <motion.img
-                src="/assets/images/cylinder.png"
+                src="/assets/images/cylinder.webp"
                 alt="cuboid object"
                 className="size-[140px]"
                 style={{

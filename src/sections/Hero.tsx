@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="custom-center absolute">
               <Circle animate className="absolute -top-[900px] left-[200px]">
                 <motion.img
-                  src="/assets/images/cube.png"
+                  src="/assets/images/cube.webp"
                   alt="cube 3d image"
                   className="size-[140px]"
                   ref={cubeRef}
@@ -79,7 +79,7 @@ const Hero = () => {
             <div className="custom-center absolute">
               <Circle className="absolute left-[200px] top-[270px]">
                 <img
-                  src="/assets/images/cuboid.png"
+                  src="/assets/images/cuboid.webp"
                   alt="cuboid 3d image"
                   className="size-[140px]"
                   loading="lazy"
@@ -90,7 +90,7 @@ const Hero = () => {
             <div className="custom-center absolute">
               <Circle animate className="absolute left-[200px] top-[270px]">
                 <motion.img
-                  src="/assets/images/cuboid.png"
+                  src="/assets/images/cuboid.webp"
                   alt="cuboid 3d image"
                   className="size-[140px]"
                   ref={cuboidRef}
@@ -103,7 +103,7 @@ const Hero = () => {
             <div className="custom-center absolute">
               <Circle className="absolute -left-[600px] -top-[80px]">
                 <motion.img
-                  src="/assets/images/torus.png"
+                  src="/assets/images/torus.webp"
                   alt="torus 3d image"
                   className="size-[140px]"
                   ref={torusRef}
@@ -120,12 +120,12 @@ const Hero = () => {
             >
               <img
                 className="custom-center absolute -z-10 w-[calc(100%_+_100px)] max-w-none brightness-[4%] hue-rotate-[240deg] saturate-[10%]"
-                src="/assets/images/icosahedron.png"
+                src="/assets/images/icosahedron.webp"
                 alt="icosahedron"
                 fetchPriority="high"
               />
               <img
-                src="/assets/images/icosahedron.png"
+                src="/assets/images/icosahedron.webp"
                 alt="Icosahedron 3d Image"
                 className="w-[500px]"
                 fetchPriority="low"

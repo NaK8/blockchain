@@ -109,7 +109,7 @@ const FeaturesGrid = () => {
             <div className="hidden md:block">
               <div className="relative z-0 inline-flex">
                 <motion.img
-                  src="/assets/images/torus-knot.png"
+                  src="/assets/images/torus-knot.webp"
                   alt="torus knot 3d image"
                   className="size-96 max-w-none"
                   ref={torusKnotRef}
@@ -119,7 +119,7 @@ const FeaturesGrid = () => {
                   }}
                 />
                 <motion.img
-                  src="/assets/images/hemisphere.png"
+                  src="/assets/images/hemisphere.webp"
                   alt="hemisphere 3d image"
                   className="absolute top-3/4 -z-10 size-96 scale-x-[-1]"
                   ref={firstHemisphereRef}
@@ -135,7 +135,7 @@ const FeaturesGrid = () => {
             <div className="relative hidden md:block">
               <div className="absolute right-0">
                 <motion.img
-                  src="/assets/images/cone.png"
+                  src="/assets/images/cone.webp"
                   alt="cone 3d image"
                   className="size-96 max-w-none rotate-12"
                   ref={coneRef}
@@ -145,7 +145,7 @@ const FeaturesGrid = () => {
                   }}
                 />
                 <motion.img
-                  src="/assets/images/hemisphere.png"
+                  src="/assets/images/hemisphere.webp"
                   alt="hemisphere 3d image"
                   className="absolute top-3/4 -z-10"
                   ref={secondHemisphereRef}

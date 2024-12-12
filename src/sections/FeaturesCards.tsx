@@ -4,28 +4,28 @@ import { twMerge } from "tailwind-merge";
 
 const cardData = [
   {
-    image: "/assets/images/pill.png",
+    image: "/assets/images/pill.webp",
     title: "Revolutionary Blockchain API",
     description:
       "Effortlessly integrate and manage blockchain data with ou cutting-edge API, designed for seamless connectivity.",
     color: "fuchsia",
   },
   {
-    image: "/assets/images/cuboid.png",
+    image: "/assets/images/cuboid.webp",
     title: "Decentralized Data Solutions",
     description:
       "Empower your applications with decentralized data solutions, ensuring security and transparency at every step.",
     color: "lime",
   },
   {
-    image: "/assets/images/cube.png",
+    image: "/assets/images/cube.webp",
     title: "Next-Gen Smart Contracts",
     description:
       "Unlock the potential of next-gen smart contracts with our robust and scalable API, tailored for modern blockchain needs.",
     color: "cyan",
   },
   {
-    image: "/assets/images/icosahedron.png",
+    image: "/assets/images/icosahedron.webp",
     title: "Seamless Blockchain Integration",
     description:
       "Integrate blockchain technology seamlessly into your projects, with minimal effort and maximum efficiency.",
