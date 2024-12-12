@@ -12,9 +12,11 @@ import {
 import { motion } from "motion/react";
 
 const positions = await getCollection("positions");
+const title = "Careers | Blockforge";
+const metaDescription = "We are hiring join our dynamic team";
 ---
 
-<DefaultLayout>
+<DefaultLayout title={title} metaDescription={metaDescription}>
   <InteriorHero>
     <div class="relative">
       <p

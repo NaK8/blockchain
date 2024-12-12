@@ -42,20 +42,31 @@ const Footer = () => {
       <div className="container">
         <div className="flex items-center justify-between">
           <div>
-            <img
-              src="/assets/images/logo.svg"
-              decoding="async"
-              height={23}
-              width={206}
-              loading="lazy"
-              alt="logo"
-            />
+            <a href="/" data-astro-prefetch>
+              <img
+                src="/assets/images/logo.svg"
+                data-astro-prefetch
+                decoding="async"
+                height={23}
+                width={206}
+                loading="lazy"
+                alt="logo"
+              />
+            </a>
           </div>
           <nav className="hidden gap-12 font-heading font-black text-zinc-500 md:flex">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/careers">Career</a>
-            <a href="/contact">Contact</a>
+            <a href="/" data-astro-prefetch>
+              Home
+            </a>
+            <a href="/blog" data-astro-prefetch>
+              Blog
+            </a>
+            <a href="/careers" data-astro-prefetch>
+              Career
+            </a>
+            <a href="/contact" data-astro-prefetch>
+              Contact
+            </a>
           </nav>
         </div>
         <div className="mt-12 md:mt-48 md:flex md:items-center md:justify-between">

@@ -23,13 +23,13 @@ const {
     category,
     title,
     description,
-    author: { name, title: autherTitle },
+    author: { name, title: autherTitle, image },
   },
 } = post;
 ---
 
 <!-- <BlogPost {...post.data}> --><!-- </BlogPost> -->
-<DefaultLayout>
+<DefaultLayout title={title} metaDescription={description.slice(0, 70)}>
   <InteriorHero>
     <div class="relative">
       <div class="flex justify-center">
@@ -44,7 +44,13 @@ const {
         {description}
       </p>
       <div class="flex flex-col items-center mt-8">
-        <div class="size-16 rounded-full bg-zinc-700 bg-cover bg-center"></div>
+        <div
+          class="size-16 rounded-full bg-zinc-700 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        >
+        </div>
         <div class="font-extralight text-lg mt-3">{name}</div>
         <div class="text-zinc-500">{autherTitle}</div>
       </div>

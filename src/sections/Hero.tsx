@@ -50,7 +50,7 @@ const Hero = () => {
         <div className="mt-10 flex justify-center">
           <CutCornerButton>Get Started</CutCornerButton>
         </div>
-        <div className="mt-24 flex justify-center">
+        <div className="relative -z-10 mt-24 flex justify-center">
           <div className="relative z-0 inline-flex">
             <div className="custom-center absolute">
               <Hexagon className="size-[1100px]" size={1100} />
@@ -139,7 +139,7 @@ const Hero = () => {
             </motion.div>
           </div>
         </div>
-        <div className="mt-40 flex flex-col items-center justify-center gap-4 md:mt-80">
+        <div className="relative -z-10 mt-40 flex flex-col items-center justify-center gap-4 md:mt-80">
           <div className="inline-flex h-10 w-5 justify-center rounded-full pt-2 outline outline-[6px] outline-fuchsia-500/10">
             <motion.div
               animate={{

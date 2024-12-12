@@ -13,9 +13,12 @@ const latestPosts = posts
     return a.data.pubDate.valueOf() > b.data.pubDate.valueOf() ? -1 : 1;
   })
   .slice(0, 4);
+
+const title = "Blockforge Blockchain Sass";
+const metaDescription = "We are hiring join our dynamic team";
 ---
 
-<DefaultLayout>
+<DefaultLayout title={title} metaDescription={metaDescription}>
   <Hero client:load />
   <FeaturesCards client:load />
   <FeaturesGrid client:load />

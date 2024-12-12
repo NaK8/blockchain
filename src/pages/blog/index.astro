@@ -15,9 +15,11 @@ const posts = (await getCollection("blog")).sort(
 );
 
 const latestPost = posts[0];
+const title = "Blog | Blockforge";
+const metaDescription = "Read our blogs";
 ---
 
-<DefaultLayout>
+<DefaultLayout title={title} metaDescription={metaDescription}>
   <section class="py-60 relative overflow-x-clip">
     <div class="absolute custom-center">
       <Hexagon size={800} duration={30} client:load />
@@ -59,6 +61,7 @@ const latestPost = posts[0];
               ({ data: { category, title, description }, slug }, index) => (
                 <motion.a
                   client:load
+                  data-astro-prefetch
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}

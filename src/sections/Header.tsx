@@ -39,7 +39,7 @@ const Header = () => {
         <div className="container">
           <div className="flex h-24 items-center justify-between md:h-28">
             <div>
-              <a href="/">
+              <a href="/" data-astro-prefetch>
                 <img
                   src="/assets/images/logo.svg"
                   fetchPriority="high"
@@ -102,6 +102,7 @@ const Header = () => {
                     <motion.a
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
+                      data-astro-prefetch
                       transition={{
                         duration: 0.5,
                         ease: "linear",

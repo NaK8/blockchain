@@ -65,7 +65,7 @@ const LatestPosts = ({
           >
             {latestPosts.map(
               ({ data: { title, description, category }, slug }, itemIndex) => (
-                <a href={`/blog/${slug}`}>
+                <a href={`/blog/${slug}`} data-astro-prefetch>
                   <Card
                     buttonText="Read More"
                     key={itemIndex}

@@ -159,7 +159,7 @@ const FeaturesGrid = () => {
                 <motion.img
                   src="/assets/images/hemisphere.webp"
                   alt="hemisphere 3d image"
-                  className="absolute top-3/4 -z-10"
+                  className="absolute top-3/4 -z-10 size-96"
                   loading="lazy"
                   decoding="async"
                   height={50}
