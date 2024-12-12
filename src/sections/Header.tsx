@@ -40,7 +40,11 @@ const Header = () => {
           <div className="flex h-24 items-center justify-between md:h-28">
             <div>
               <a href="/">
-                <img src="/assets/images/logo.svg" alt="logo image" />
+                <img
+                  src="/assets/images/logo.svg"
+                  fetchPriority="high"
+                  alt="logo image"
+                />
               </a>
             </div>
             <div className="flex items-center gap-4">

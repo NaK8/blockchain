@@ -76,6 +76,8 @@ const FeaturesCards = () => {
                       <div className="absolute top-[calc(100%+16px)] h-4 w-full rounded-[100%] bg-zinc-950/70 transition duration-300 [mask-image:radial-gradient(closest-side,black,transparent)] group-hover:bg-zinc-950/30"></div>
                       <img
                         src={card.image}
+                        loading="lazy"
+                        decoding="async"
                         alt="pill image"
                         className="size-40 transition duration-300 group-hover:-translate-y-6"
                       />
