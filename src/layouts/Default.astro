@@ -1,5 +1,4 @@
 ---
-import { ClientRouter } from "astro:transitions";
 import CallToAction from "../sections/CallToAction";
 import Footer from "../sections/Footer";
 import Header from "../sections/Header";
@@ -15,7 +14,6 @@ const { title, metaDescription } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
     <title>{title}</title>
-    <ClientRouter />
     <meta name="description" content={metaDescription} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
