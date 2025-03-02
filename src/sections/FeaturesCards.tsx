@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import Card from "../components/Card";
+import { useEffect, useState, lazy } from "react";
+const Card = lazy(() => import("../components/Card"));
 import { twMerge } from "tailwind-merge";
 
 const cardData = [
@@ -52,7 +52,7 @@ const FeaturesCards = () => {
   return (
     <section className="overflow-x-clip py-24 md:-mt-28">
       <div className="container">
-        <h2 className="text-center font-heading text-4xl font-black md:text-5xl lg:text-6xl">
+        <h2 className="font-heading text-center text-4xl font-black md:text-5xl lg:text-6xl">
           Discover the future of blockchain with Blockforge.
         </h2>
         <div className="mt-36 flex lg:mt-48">
@@ -86,7 +86,7 @@ const FeaturesCards = () => {
                       />
                     </div>
                   </div>
-                  <h3 className="mt-12 font-heading text-3xl font-black">
+                  <h3 className="font-heading mt-12 text-3xl font-black">
                     {card.title}
                   </h3>
                   <p className="mt-4 text-lg text-zinc-400">

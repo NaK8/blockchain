@@ -37,10 +37,10 @@ const Hero = () => {
   return (
     <section className="overflow-x-clip py-24 md:py-52">
       <div className="container">
-        <p className="text-center font-extrabold uppercase tracking-wider text-zinc-500">
+        <p className="text-center font-extrabold tracking-wider text-zinc-500 uppercase">
           Introducing Backforge
         </p>
-        <h1 className="mx-auto mt-4 max-w-3xl text-center font-heading text-5xl font-black md:text-6xl lg:text-7xl">
+        <h1 className="font-heading mx-auto mt-4 max-w-3xl text-center text-5xl font-black md:text-6xl lg:text-7xl">
           The future of blockchain is here.
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-center text-xl text-zinc-400 md:text-2xl">
@@ -77,7 +77,7 @@ const Hero = () => {
               </Circle>
             </div>
             <div className="custom-center absolute">
-              <Circle className="absolute left-[200px] top-[270px]">
+              <Circle className="absolute top-[270px] left-[200px]">
                 <img
                   src="/assets/images/cuboid.webp"
                   alt="cuboid 3d image"
@@ -90,7 +90,7 @@ const Hero = () => {
               </Circle>
             </div>
             <div className="custom-center absolute">
-              <Circle animate className="absolute left-[200px] top-[270px]">
+              <Circle animate className="absolute top-[270px] left-[200px]">
                 <motion.img
                   src="/assets/images/cuboid.webp"
                   alt="cuboid 3d image"
@@ -103,7 +103,7 @@ const Hero = () => {
               </Circle>
             </div>
             <div className="custom-center absolute">
-              <Circle className="absolute -left-[600px] -top-[80px]">
+              <Circle className="absolute -top-[80px] -left-[600px]">
                 <motion.img
                   src="/assets/images/torus.webp"
                   alt="torus 3d image"
@@ -140,7 +140,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="relative -z-10 mt-40 flex flex-col items-center justify-center gap-4 md:mt-80">
-          <div className="inline-flex h-10 w-5 justify-center rounded-full pt-2 outline outline-[6px] outline-fuchsia-500/10">
+          <div className="inline-flex h-10 w-5 justify-center rounded-full pt-2 outline-[6px] outline-fuchsia-500/10">
             <motion.div
               animate={{
                 translateY: 12,
@@ -155,7 +155,7 @@ const Hero = () => {
               className="h-3 w-1 rounded-full bg-fuchsia-500"
             />
           </div>
-          <p className="font-extrabold uppercase tracking-wider text-zinc-500">
+          <p className="font-extrabold tracking-wider text-zinc-500 uppercase">
             Scroll to learn more
           </p>
         </div>

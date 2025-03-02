@@ -1,11 +1,11 @@
-import React, { useRef, type ComponentRef } from "react";
+import React, { useRef, type ComponentRef, lazy } from "react";
 import Card from "../components/Card";
 import type { CollectionEntry } from "astro:content";
 import { getPostColorFromCategory } from "../utils/postUtils";
-import Tag from "../components/Tag";
-import CutCornerButton from "../components/CutCornerButton";
 import { twMerge } from "tailwind-merge";
 import { motion, useScroll, useTransform } from "motion/react";
+const Tag = lazy(() => import("../components/Tag"));
+const CutCornerButton = lazy(() => import("../components/CutCornerButton"));
 
 const LatestPosts = ({
   latestPosts,
@@ -24,7 +24,7 @@ const LatestPosts = ({
     <section className="py-60">
       <div className="container">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-center font-heading text-4xl font-black md:text-5xl lg:text-6xl">
+          <h2 className="font-heading text-center text-4xl font-black md:text-5xl lg:text-6xl">
             Your portal to everything blockchain
           </h2>
           <p className="mt-8 text-center text-xl text-zinc-400 lg:text-2xl">
@@ -47,7 +47,7 @@ const LatestPosts = ({
                     <Tag color={getPostColorFromCategory(category)}>
                       {category}
                     </Tag>
-                    <h3 className="mt-3 font-heading text-3xl font-black">
+                    <h3 className="font-heading mt-3 text-3xl font-black">
                       {title}
                     </h3>
                     <p className="mt-6 text-lg text-zinc-400">{description}</p>
@@ -81,7 +81,7 @@ const LatestPosts = ({
                     <Tag color={getPostColorFromCategory(category)}>
                       {category}
                     </Tag>
-                    <h3 className="mt-3 font-heading text-3xl font-black">
+                    <h3 className="font-heading mt-3 text-3xl font-black">
                       {title}
                     </h3>
                     <p className="mt-6 text-lg text-zinc-400">{description}</p>

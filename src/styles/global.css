@@ -1,13 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@theme {
+  --font-heading: "Inter", "sans-serif";
+  --font-body: "Karla", "sans-serif";
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1200px;
+}
 
 @layer base {
   body {
-    @apply bg-zinc-900 font-body text-zinc-300 antialiased;
+    @apply font-body bg-zinc-900 text-zinc-300 antialiased;
   }
 
   .custom-center {
-    @apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
 }

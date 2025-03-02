@@ -1,6 +1,6 @@
-import { useRef, type ComponentRef } from "react";
-import CutCornerButton from "../components/CutCornerButton";
-import TextButton from "../components/TextButton";
+import { useRef, type ComponentRef, lazy } from "react";
+const CutCornerButton = lazy(() => import("../components/CutCornerButton"));
+const TextButton = lazy(() => import("../components/TextButton"));
 import { motion, useScroll, useTransform } from "motion/react";
 
 const listItems = [
@@ -94,7 +94,7 @@ const FeaturesGrid = () => {
                     key={crypto.randomUUID()}
                     className="flex items-center gap-3"
                   >
-                    <div className="inline-flex size-8 flex-shrink-0 items-center justify-center rounded-full outline outline-4 -outline-offset-4 outline-fuchsia-500/10">
+                    <div className="inline-flex size-8 flex-shrink-0 items-center justify-center rounded-full outline-4 -outline-offset-4 outline-fuchsia-500/10">
                       <div className="size-1.5 rounded-full bg-fuchsia-500"></div>
                     </div>
                     <span className="text-xl font-bold">{item}</span>
