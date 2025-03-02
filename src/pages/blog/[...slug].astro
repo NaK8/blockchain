@@ -1,14 +1,13 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-// import BlogPost from '../../layouts/BlogPost.astro';
 import DefaultLayout from "../../layouts/Default.astro";
 import InteriorHero from "../../components/InteriorHero.astro";
 import InteriorContent from "../../components/InteriorContent.astro";
 import Tag from "../../components/Tag";
 import { getPostColorFromCategory } from "../../utils/postUtils";
 
+const posts = await getCollection("blog");
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
@@ -16,7 +15,10 @@ export async function getStaticPaths() {
 }
 type Props = CollectionEntry<"blog">;
 
-const post: Props = Astro.props;
+// const post: Props = Astro.props;
+const { slug } = Astro.params;
+const post = posts.find((page) => page.slug === slug);
+if (!post) return Astro.redirect("/404");
 const { Content } = await post.render();
 const {
   data: {
